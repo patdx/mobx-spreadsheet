@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "daisyui": "2.7.0",
+    "daisyui": "2.8.0",
     "lodash": "4.17.21",
     "mathjs": "10.4.0",
     "mobx": "6.4.2",
