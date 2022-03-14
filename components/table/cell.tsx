@@ -1,13 +1,15 @@
 import { action } from "mobx";
 import { observer } from "mobx-react-lite";
 import { useRef, useState } from "react";
-import { resolveValue, valueMap } from "./table";
+import { getEnteredValue, resolveValue, valueMap } from "./table";
 
 export const Cell = observer(function Cell(props: { cellKey: string }) {
   // if (typeof window === "undefined") return null;
   const [isEdit, setIsEdit] = useState(false);
 
-  const value = resolveValue(props.cellKey);
+  const cellData = valueMap.get(props.cellKey);
+
+  const resolvedValue = resolveValue(props.cellKey);
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -19,14 +21,19 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
             evt.preventDefault();
             const text = inputRef.current?.value;
 
+            if (!text) {
+              valueMap.delete(props.cellKey);
+              return;
+            }
+
             console.log("text", text);
 
-            const [equals, ...asFormula] = text ?? "sdf sdfsd";
+            const isFormula = /^=/.test(text);
 
-            if (equals === "=") {
+            if (isFormula) {
               valueMap.set(props.cellKey, {
                 type: "formula",
-                formula: asFormula as any,
+                formula: text.replace(/^=/, ""),
               });
             } else {
               valueMap.set(props.cellKey, {
@@ -38,32 +45,33 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
             setIsEdit(false);
           }}
         >
-          <input ref={inputRef} type="text" className="input-control" />
+          <input
+            ref={inputRef}
+            autoFocus
+            type="text"
+            className="input-control w-full h-full"
+            defaultValue={getEnteredValue(props.cellKey)}
+          />
         </form>
       </>
     );
   } else {
     return (
-      <>
-        <pre className="break-all text-gray-500">
-          {JSON.stringify(valueMap.get(props.cellKey))}
-        </pre>
-        <button
-          type="button"
-          className="w-full h-10"
-          onClick={() => {
-            setIsEdit(true);
-          }}
-          // onClick={action(() => {
-          //   valueMap.set(props.cellKey, {
-          //     type: "value",
-          //     value: Math.random(),
-          //   });
-          // })}
-        >
-          {value}
-        </button>
-      </>
+      <button
+        type="button"
+        className="w-full h-10"
+        onClick={() => {
+          setIsEdit(true);
+        }}
+      >
+        {cellData?.type === "formula" ? (
+          <pre className="break-all text-gray-500">
+            {getEnteredValue(props.cellKey)}
+          </pre>
+        ) : undefined}
+
+        <pre>{resolvedValue}</pre>
+      </button>
     );
   }
 });
