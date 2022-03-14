@@ -22,18 +22,36 @@ export const valueMap = new ObservableMap<string, CellData>({
 export const resolveValue = (key: string) => {
   console.log(`resolve ${key}`);
   const data = valueMap.get(key);
+
+  try {
+    const value =
+      data?.type === "value"
+        ? data.value
+        : data?.type === "formula"
+        ? math.evaluate(data.formula, {
+            get: (key: string) => {
+              return resolveValue(key);
+            },
+            set: (key: string, value: any) => valueMap.set(key, value),
+            has: (key: string) => valueMap.has(key),
+            keys: () => valueMap.keys(),
+          })
+        : undefined;
+    return value;
+  } catch (err) {
+    console.warn(err);
+    return `#ERROR#`;
+  }
+};
+
+export const getEnteredValue = (key: string): string | undefined => {
+  const data = valueMap.get(key);
   const value =
     data?.type === "value"
-      ? data.value
+      ? String(data.value)
       : data?.type === "formula"
-      ? math.evaluate(data.formula, {
-          get: (key: string) => {
-            return resolveValue(key);
-          },
-          set: (key: string, value: any) => valueMap.set(key, value),
-          has: (key: string) => valueMap.has(key),
-          keys: () => valueMap.keys(),
-        })
+      ? `=${data.formula}`
       : undefined;
+
   return value;
 };
