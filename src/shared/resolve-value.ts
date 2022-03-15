@@ -1,27 +1,9 @@
-import { all, create } from "mathjs";
-import { ObservableMap } from "mobx";
-
-const math = create(all);
-
-type CellData =
-  | {
-      type: "value";
-      value: number;
-    }
-  | { type: "formula"; formula: string };
-
-export const valueMap = new ObservableMap<string, CellData>({
-  A1: { type: "value", value: 1 },
-  B1: { type: "value", value: 2 },
-  C1: {
-    type: "formula",
-    formula: "A1 + B1",
-  },
-});
+import { math } from "./math";
+import { cellValueMap } from "./state";
 
 export const resolveValue = (key: string) => {
   console.log(`resolve ${key}`);
-  const data = valueMap.get(key);
+  const data = cellValueMap.get(key);
 
   try {
     const value =
@@ -32,9 +14,9 @@ export const resolveValue = (key: string) => {
             get: (key: string) => {
               return resolveValue(key);
             },
-            set: (key: string, value: any) => valueMap.set(key, value),
-            has: (key: string) => valueMap.has(key),
-            keys: () => valueMap.keys(),
+            set: (key: string, value: any) => cellValueMap.set(key, value),
+            has: (key: string) => cellValueMap.has(key),
+            keys: () => cellValueMap.keys(),
           })
         : undefined;
     return value;
@@ -45,7 +27,7 @@ export const resolveValue = (key: string) => {
 };
 
 export const getEnteredValue = (key: string): string | undefined => {
-  const data = valueMap.get(key);
+  const data = cellValueMap.get(key);
   const value =
     data?.type === "value"
       ? String(data.value)
