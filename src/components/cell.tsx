@@ -34,13 +34,15 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
 
             if (isFormula) {
               cellValueMap.set(props.cellKey, {
-                type: 'formula',
-                formula: text.replace(/^=/, ''),
+                type: 'fn',
+                raw: text,
+                fn: text.replace(/^=/, ''),
               });
             } else {
               const asNumber = Number(text);
               cellValueMap.set(props.cellKey, {
                 type: 'value',
+                raw: text,
                 value: Number.isFinite(asNumber) ? asNumber : text,
               });
             }
@@ -70,7 +72,7 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
           appState.editingCell = props.cellKey;
         })}
       >
-        {cellData?.type === 'formula' ? (
+        {cellData?.type === 'fn' ? (
           <pre className="break-all text-gray-500 text-xs">
             {getEnteredValue(props.cellKey)}
           </pre>

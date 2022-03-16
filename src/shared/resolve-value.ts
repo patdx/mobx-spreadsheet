@@ -1,5 +1,6 @@
-import { math } from "./math";
-import { cellValueMap } from "./state";
+import { math } from './math';
+import { cellValueMap } from './state';
+import { CellData } from './types';
 
 export const resolveValue = (key: string) => {
   console.log(`resolve ${key}`);
@@ -7,10 +8,10 @@ export const resolveValue = (key: string) => {
 
   try {
     const value =
-      data?.type === "value"
+      data?.type === 'value'
         ? data.value
-        : data?.type === "formula"
-        ? math.evaluate(data.formula, {
+        : data?.type === 'fn'
+        ? math.evaluate(data.fn, {
             get: (key: string) => {
               return resolveValue(key);
             },
@@ -28,12 +29,11 @@ export const resolveValue = (key: string) => {
 
 export const getEnteredValue = (key: string): string | undefined => {
   const data = cellValueMap.get(key);
-  const value =
-    data?.type === "value"
-      ? String(data.value)
-      : data?.type === "formula"
-      ? `=${data.formula}`
-      : undefined;
-
-  return value;
+  return data?.raw;
+  // const value =
+  //   data?.type === 'value'
+  //     ? String(data.value)
+  //     : data?.type === 'fn'
+  //     ? `=${data.fn}`
+  //     : undefined;
 };
