@@ -938,9 +938,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:2.8.0":
-  version: 2.8.0
-  resolution: "daisyui@npm:2.8.0"
+"daisyui@npm:2.9.0":
+  version: 2.9.0
+  resolution: "daisyui@npm:2.9.0"
   dependencies:
     color: ^4.2
     css-selector-tokenizer: ^0.8.0
@@ -949,7 +949,7 @@ __metadata:
   peerDependencies:
     autoprefixer: ^10.0.2
     postcss: ^8.1.6
-  checksum: e542b148e791ffec8a5227138b257a04bf72a598b30e240f94fb7356826599d41dfea24b4d4e69c534910c4567cdfe119fbd60dccd90f270bb3c28edcab29bba
+  checksum: 91a70dd62c4a701007fcfd2744fa50f8a7ec824a6fc16339ef23c6d89f0016fda256e0615b3560427d5a2001aeb330bde2b829637bc4dcf5f57adb31eff1a4b1
   languageName: node
   linkType: hard
 
@@ -2422,7 +2422,7 @@ __metadata:
     "@types/react": 17.0.40
     "@use-it/event-listener": ^0.1.7
     autoprefixer: 10.4.4
-    daisyui: 2.8.0
+    daisyui: 2.9.0
     eslint: 8.11.0
     eslint-config-next: 12.1.0
     lodash: 4.17.21
