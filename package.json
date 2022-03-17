@@ -13,7 +13,7 @@
     "daisyui": "2.9.0",
     "lodash": "4.17.21",
     "mathjs": "10.4.0",
-    "mobx": "6.4.2",
+    "mobx": "6.5.0",
     "mobx-react-lite": "3.3.0",
     "next": "12.1.0",
     "react": "17.0.2",
