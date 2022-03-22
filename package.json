@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@use-it/event-listener": "^0.1.7",
-    "daisyui": "2.11.0",
+    "daisyui": "2.11.1",
     "lodash": "4.17.21",
     "mathjs": "10.4.0",
     "mobx": "6.5.0",
