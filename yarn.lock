@@ -876,10 +876,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"complex.js@npm:^2.0.15":
-  version: 2.0.15
-  resolution: "complex.js@npm:2.0.15"
-  checksum: f39b4ee8f8c507f896e0a0ff440fa52074c15fc4476644c5db730f5da8e6e81a010ef90ea9eda907758737062c944ac6abd4783ff14978a8976aa41e56572e12
+"complex.js@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "complex.js@npm:2.1.0"
+  checksum: 8a31a0d8191d793e08c8bac5065b8146f2243d8f15b81736c07211f7e2b73e5d71c5d010ed38525985d83ac37027d66dbe51704e8070a59df6cf8130d55562b7
   languageName: node
   linkType: hard
 
@@ -2283,12 +2283,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mathjs@npm:10.4.1":
-  version: 10.4.1
-  resolution: "mathjs@npm:10.4.1"
+"mathjs@npm:10.4.2":
+  version: 10.4.2
+  resolution: "mathjs@npm:10.4.2"
   dependencies:
     "@babel/runtime": ^7.17.8
-    complex.js: ^2.0.15
+    complex.js: ^2.1.0
     decimal.js: ^10.3.1
     escape-latex: ^1.2.0
     fraction.js: ^4.2.0
@@ -2298,7 +2298,7 @@ __metadata:
     typed-function: ^2.1.0
   bin:
     mathjs: bin/cli.js
-  checksum: 6a9a703a745bd7befd9cb95b6b9f893da810e0677e5e08981a7061b87faea38cc2a4a7fa350db0b3608f053975df38e6b1f65de5e7da3d684394785a93a2d492
+  checksum: 5cbf1d9c35c0d4f635be080fce4a9bd12a3bc1875405ff0c22445b039acdc269f2b2e116ca66a2f258cd33f6dd5ca4b694ecffa2d574418915fdd78794b8f4cb
   languageName: node
   linkType: hard
 
@@ -2459,7 +2459,7 @@ __metadata:
     eslint: 8.12.0
     eslint-config-next: 12.1.1
     lodash: 4.17.21
-    mathjs: 10.4.1
+    mathjs: 10.4.2
     mobx: 6.5.0
     mobx-react-lite: 3.3.0
     next: 12.1.1
