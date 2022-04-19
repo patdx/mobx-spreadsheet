@@ -12,7 +12,7 @@
     "@use-it/event-listener": "^0.1.7",
     "daisyui": "2.14.1",
     "lodash": "4.17.21",
-    "mathjs": "10.4.3",
+    "mathjs": "10.5.0",
     "mobx": "6.5.0",
     "mobx-react-lite": "3.3.0",
     "next": "12.1.5",
