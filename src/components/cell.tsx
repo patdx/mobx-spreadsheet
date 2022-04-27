@@ -4,9 +4,11 @@ import { observer } from 'mobx-react-lite';
 import { useRef } from 'react';
 import { getEnteredValue, resolveValue } from '../shared/resolve-value';
 import { appState, cellValueMap } from '../shared/state';
+import clsx from "clsx";
 
 export const Cell = observer(function Cell(props: { cellKey: string }) {
-  const isEdit = computed(() => appState.editingCell === props.cellKey).get();
+  const isActive = computed(() => appState.activeCell === props.cellKey).get();
+  const isEdit = computed(() => appState.activeCell === props.cellKey && appState.mode === "edit").get();
 
   const cellData = cellValueMap.get(props.cellKey);
 
@@ -18,7 +20,7 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
     return (
       <>
         <form
-          className="absolute inset-0"
+          className={clsx("absolute inset-0", isActive && "bg-gray-100")}
           onSubmit={(evt) => {
             evt.preventDefault();
             const text = inputRef.current?.value;
@@ -48,7 +50,7 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
             }
 
             runInAction(() => {
-              appState.editingCell = undefined;
+              appState.mode = undefined
             });
           }}
         >
@@ -56,7 +58,7 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
             ref={inputRef}
             autoFocus
             type="text"
-            className="input-control w-full h-full text-center px-0"
+            className="input-control w-full h-full text-center px-0 bg-gray-100"
             defaultValue={getEnteredValue(props.cellKey)}
           />
         </form>
@@ -66,10 +68,11 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
     return (
       <button
         type="button"
-        className="absolute inset-0"
+        className={clsx("absolute inset-0 w-full", isActive && "bg-gray-100")}
         // className="w-full h-10"
         onClick={action(() => {
-          appState.editingCell = props.cellKey;
+          appState.activeCell = props.cellKey;
+          appState.mode = "edit"
         })}
       >
         {cellData?.type === 'fn' ? (

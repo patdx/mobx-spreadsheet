@@ -5,7 +5,8 @@ import type { CellData } from './types';
 export const appState = makeAutoObservable({
   rows: 10,
   columns: 5,
-  editingCell: undefined as string | undefined,
+  activeCell: undefined as string | undefined,
+  mode: undefined as "edit" | undefined,
 });
 
 // TODO: consider valtio instead?

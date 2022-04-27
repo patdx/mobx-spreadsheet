@@ -4,6 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { Cell } from '../components/cell';
 import { appState, cellValueMap } from '../shared/state';
 import useEventListener from '@use-it/event-listener';
+import fromPairs from 'lodash/fromPairs';
 
 const COLUMN_LABELS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -12,7 +13,9 @@ const InternalState = observer(function InternalState() {
     <details className="text-xs">
       <summary>Internal state</summary>
 
-      <pre>{JSON.stringify(cellValueMap.toJSON(), undefined, 2)}</pre>
+      <pre>
+        {JSON.stringify(fromPairs(cellValueMap.toJSON()), undefined, 2)}
+      </pre>
     </details>
   );
 });
@@ -20,9 +23,15 @@ const InternalState = observer(function InternalState() {
 export const Table = observer(function Table() {
   useEventListener('keyup', (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
-      runInAction(() => {
-        appState.editingCell = undefined;
-      });
+      if (appState.mode === 'edit') {
+        runInAction(() => {
+          appState.mode = undefined;
+        });
+      } else if (!appState.mode && appState.activeCell) {
+        runInAction(() => {
+          appState.activeCell = undefined;
+        });
+      }
     }
   });
 
@@ -73,7 +82,7 @@ export const Table = observer(function Table() {
             <td></td>
             <td colSpan={appState.columns} className="h-6 relative">
               <button
-                className="absolute inset-0 hover:bg-gray-100 h-6"
+                className="absolute inset-0 hover:bg-gray-100 h-6 w-full"
                 onClick={action(() => {
                   appState.rows += 1;
                 })}

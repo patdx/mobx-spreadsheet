@@ -5,7 +5,7 @@ export const normalizeInitialCellData = (
 ) => {
   for (const item of Object.values(data)) {
     if (item.type === 'fn') {
-      if (item.fn === 'string' && item.raw !== 'string') {
+      if (typeof item.fn === 'string' && item.raw !== 'string') {
         item.raw = `=${item.fn}`;
       }
     }
