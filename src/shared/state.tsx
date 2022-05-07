@@ -5,15 +5,11 @@ import type { CellData } from './types';
 export const appState = makeAutoObservable({
   rows: 10,
   columns: 5,
+  // UI
   activeCell: undefined as string | undefined,
-  mode: undefined as "edit" | undefined,
-});
-
-// TODO: consider valtio instead?
-// though mobx is nice in that it is actually React-independent
-
-export const cellValueMap = new ObservableMap<string, CellData>(
-  normalizeInitialCellData({
+  // UI
+  mode: undefined as 'edit' | undefined,
+  cells: normalizeInitialCellData({
     A1: { type: 'value', value: 1 },
     A2: { type: 'value', value: 'TE' },
     B2: { type: 'value', value: 'ST' },
@@ -27,5 +23,5 @@ export const cellValueMap = new ObservableMap<string, CellData>(
       type: 'fn',
       fn: 'sum(A1:C1)',
     },
-  })
-);
+  }),
+});

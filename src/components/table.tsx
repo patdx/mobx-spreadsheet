@@ -1,22 +1,28 @@
 import times from 'lodash/times';
-import { action, runInAction } from 'mobx';
+import { action, runInAction, toJS } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import { Cell } from '../components/cell';
-import { appState, cellValueMap } from '../shared/state';
+import { appState } from '../shared/state';
 import useEventListener from '@use-it/event-listener';
-import fromPairs from 'lodash/fromPairs';
+import Link from "next/link";
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const COLUMN_LABELS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 const InternalState = observer(function InternalState() {
+  let serialized = toJS(appState) as any;
   return (
+    <>
+    <Link href={`/${JSON.stringify(serialized)}`}><a>Permalink</a></Link>
     <details className="text-xs">
       <summary>Internal state</summary>
 
       <pre>
-        {JSON.stringify(fromPairs(cellValueMap.toJSON()), undefined, 2)}
+        {JSON.stringify(serialized, undefined, 2)}
       </pre>
     </details>
+    </>
   );
 });
 
@@ -34,6 +40,19 @@ export const Table = observer(function Table() {
       }
     }
   });
+
+  const router = useRouter();
+
+  const initialData = router.query.slug?.[0];
+
+ console.log(router.query)
+
+  useEffect(() => {
+    if (initialData) {
+      console.log(`initialize initial data`)
+      Object.assign(appState, JSON.parse(initialData))
+    }
+  }, [initialData])
 
   return (
     <>

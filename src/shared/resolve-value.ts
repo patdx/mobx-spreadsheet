@@ -1,10 +1,9 @@
 import { math } from './math';
-import { cellValueMap } from './state';
-import { CellData } from './types';
+import { appState } from './state';
 
 export const resolveValue = (key: string) => {
   console.log(`resolve ${key}`);
-  const data = cellValueMap.get(key);
+  const data = appState.cells[key];
 
   try {
     const value =
@@ -15,9 +14,11 @@ export const resolveValue = (key: string) => {
             get: (key: string) => {
               return resolveValue(key);
             },
-            set: (key: string, value: any) => cellValueMap.set(key, value),
-            has: (key: string) => cellValueMap.has(key),
-            keys: () => cellValueMap.keys(),
+            set: (key: string, value: any) => {
+              return appState.cells[key] = value;
+            },
+            has: (key: string) => Object.hasOwn(appState.cells, key),
+            keys: () => Object.keys(appState.cells),
           })
         : undefined;
     return value;
@@ -28,7 +29,7 @@ export const resolveValue = (key: string) => {
 };
 
 export const getEnteredValue = (key: string): string | undefined => {
-  const data = cellValueMap.get(key);
+  const data = appState.cells[key];
   return data?.raw;
   // const value =
   //   data?.type === 'value'

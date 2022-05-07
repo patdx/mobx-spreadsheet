@@ -2,8 +2,10 @@ import type { CellData } from './types';
 
 export const normalizeInitialCellData = (
   data: Record<string, Partial<CellData>>
-) => {
-  for (const item of Object.values(data)) {
+): Record<string, CellData> => {
+  const entries = Object.entries(data);
+
+  for (const [_key,item] of entries) {
     if (item.type === 'fn') {
       if (typeof item.fn === 'string' && item.raw !== 'string') {
         item.raw = `=${item.fn}`;
@@ -16,5 +18,5 @@ export const normalizeInitialCellData = (
     }
   }
 
-  return data as Record<string, CellData>;
+  return data as any;
 };

@@ -3,14 +3,16 @@ import { action, computed, runInAction } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import { useRef } from 'react';
 import { getEnteredValue, resolveValue } from '../shared/resolve-value';
-import { appState, cellValueMap } from '../shared/state';
-import clsx from "clsx";
+import { appState } from '../shared/state';
+import clsx from 'clsx';
 
 export const Cell = observer(function Cell(props: { cellKey: string }) {
   const isActive = computed(() => appState.activeCell === props.cellKey).get();
-  const isEdit = computed(() => appState.activeCell === props.cellKey && appState.mode === "edit").get();
+  const isEdit = computed(
+    () => appState.activeCell === props.cellKey && appState.mode === 'edit'
+  ).get();
 
-  const cellData = cellValueMap.get(props.cellKey);
+  const cellData = appState.cells[props.cellKey];
 
   const resolvedValue = resolveValue(props.cellKey);
 
@@ -20,13 +22,13 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
     return (
       <>
         <form
-          className={clsx("absolute inset-0", isActive && "bg-gray-100")}
+          className={clsx('absolute inset-0', isActive && 'bg-gray-100')}
           onSubmit={(evt) => {
             evt.preventDefault();
             const text = inputRef.current?.value;
 
             if (!text) {
-              cellValueMap.delete(props.cellKey);
+              delete appState.cells[props.cellKey];
               return;
             }
 
@@ -34,23 +36,22 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
 
             const isFormula = /^=/.test(text);
 
-            if (isFormula) {
-              cellValueMap.set(props.cellKey, {
-                type: 'fn',
-                raw: text,
-                fn: text.replace(/^=/, ''),
-              });
-            } else {
-              const asNumber = Number(text);
-              cellValueMap.set(props.cellKey, {
-                type: 'value',
-                raw: text,
-                value: Number.isFinite(asNumber) ? asNumber : text,
-              });
-            }
-
             runInAction(() => {
-              appState.mode = undefined
+              if (isFormula) {
+                appState.cells[props.cellKey] = {
+                  type: 'fn',
+                  raw: text,
+                  fn: text.replace(/^=/, ''),
+                };
+              } else {
+                const asNumber = Number(text);
+                appState.cells[props.cellKey] = {
+                  type: 'value',
+                  raw: text,
+                  value: Number.isFinite(asNumber) ? asNumber : text,
+                };
+              }
+              appState.mode = undefined;
             });
           }}
         >
@@ -68,11 +69,11 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
     return (
       <button
         type="button"
-        className={clsx("absolute inset-0 w-full", isActive && "bg-gray-100")}
+        className={clsx('absolute inset-0 w-full', isActive && 'bg-gray-100')}
         // className="w-full h-10"
         onClick={action(() => {
           appState.activeCell = props.cellKey;
-          appState.mode = "edit"
+          appState.mode = 'edit';
         })}
       >
         {cellData?.type === 'fn' ? (
