@@ -2185,9 +2185,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mathjs@npm:10.6.1":
-  version: 10.6.1
-  resolution: "mathjs@npm:10.6.1"
+"mathjs@npm:10.6.2":
+  version: 10.6.2
+  resolution: "mathjs@npm:10.6.2"
   dependencies:
     "@babel/runtime": ^7.18.3
     complex.js: ^2.1.1
@@ -2200,7 +2200,7 @@ __metadata:
     typed-function: ^2.1.0
   bin:
     mathjs: bin/cli.js
-  checksum: 049d7e4e93f9e19c57321e7d5e8c3b695d3915b23c3aa2e77f29a099a1561bdf2d18c2229947b75b23c7b8395333bb89936ef051066204cd9af07be2e6db758f
+  checksum: f7ff81054596459f6b6ba1e346c3a6d62e78cddeff78bf78285d7eba373c7392f89547478c47606c63e6542d443882e65ed7a0ed9359bebbd331daa79000564f
   languageName: node
   linkType: hard
 
@@ -2355,7 +2355,7 @@ __metadata:
     eslint: 8.18.0
     eslint-config-next: 12.1.6
     lodash: 4.17.21
-    mathjs: 10.6.1
+    mathjs: 10.6.2
     mobx: 6.6.0
     mobx-react-lite: 3.4.0
     next: 12.1.6
