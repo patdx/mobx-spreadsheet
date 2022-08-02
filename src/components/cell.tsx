@@ -24,6 +24,7 @@ export const Cell = observer(function Cell(props: { cellKey: string }) {
         <form
           className={clsx('absolute inset-0', isActive && 'bg-gray-100')}
           onSubmit={(evt) => {
+            console.log("input submitted")
             evt.preventDefault();
             const text = inputRef.current?.value;
 

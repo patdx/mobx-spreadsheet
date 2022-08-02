@@ -4,9 +4,11 @@ import { observer } from 'mobx-react-lite';
 import { Cell } from '../components/cell';
 import { appState } from '../shared/state';
 import useEventListener from '@use-it/event-listener';
-import Link from "next/link";
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { useKey } from 'rooks';
+import { moveCell } from '../shared/cell-util';
 
 const COLUMN_LABELS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -14,45 +16,100 @@ const InternalState = observer(function InternalState() {
   let serialized = toJS(appState) as any;
   return (
     <>
-    <Link href={`/${JSON.stringify(serialized)}`}><a>Permalink</a></Link>
-    <details className="text-xs">
-      <summary>Internal state</summary>
+      <Link href={`/${JSON.stringify(serialized)}`}>
+        <a>Permalink</a>
+      </Link>
+      <details className="text-xs">
+        <summary>Internal state</summary>
 
-      <pre>
-        {JSON.stringify(serialized, undefined, 2)}
-      </pre>
-    </details>
+        <pre>{JSON.stringify(serialized, undefined, 2)}</pre>
+      </details>
     </>
   );
 });
 
+const INPUT_TRIGGERS =
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
+
 export const Table = observer(function Table() {
-  useEventListener('keyup', (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      if (appState.mode === 'edit') {
-        runInAction(() => {
-          appState.mode = undefined;
-        });
-      } else if (!appState.mode && appState.activeCell) {
-        runInAction(() => {
-          appState.activeCell = undefined;
-        });
-      }
+  useKey(['Escape'], () => {
+    if (appState.mode === 'edit') {
+      runInAction(() => {
+        appState.mode = undefined;
+      });
+    } else if (!appState.mode && appState.activeCell) {
+      runInAction(() => {
+        appState.activeCell = undefined;
+      });
     }
   });
+
+  useKey(
+    ['Enter'],
+    (event) => {
+        event.preventDefault();
+        console.log('enter key triggered');
+        if (!appState.mode && appState.activeCell) {
+          runInAction(() => {
+            appState.mode = 'edit';
+          });
+        }
+    },
+    { when: !appState.mode }
+  );
+
+  useKey(['ArrowUp'], (event) => {
+    event.preventDefault();
+    runInAction(() => {
+      appState.mode = undefined;
+      appState.activeCell = moveCell(appState.activeCell, { dy: -1 });
+    });
+  });
+
+  useKey(['ArrowDown'], (event) => {
+    event.preventDefault();
+    runInAction(() => {
+      appState.mode = undefined;
+      appState.activeCell = moveCell(appState.activeCell, { dy: 1 });
+    });
+  });
+
+  useKey(
+    ['ArrowLeft'],
+    (event) => {
+      event.preventDefault();
+      runInAction(() => {
+        appState.mode = undefined;
+        appState.activeCell = moveCell(appState.activeCell, { dx: -1 });
+      });
+    },
+    { when: !appState.mode }
+  );
+
+  useKey(
+    ['ArrowRight'],
+    (event) => {
+      event.preventDefault();
+      runInAction(() => {
+        appState.mode = undefined;
+        appState.activeCell = moveCell(appState.activeCell, { dx: 1 });
+      });
+    },
+    { when: !appState.mode }
+  );
 
   const router = useRouter();
 
   const initialData = router.query.slug?.[0];
 
- console.log(router.query)
+  console.log(router.query);
 
   useEffect(() => {
     if (initialData) {
-      console.log(`initialize initial data`)
-      Object.assign(appState, JSON.parse(initialData))
+      console.log(`initialize initial data`);
+      Object.assign(appState, JSON.parse(initialData));
     }
-  }, [initialData])
+  }, [initialData]);
 
   return (
     <>
