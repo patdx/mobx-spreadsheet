@@ -16,7 +16,7 @@
     "mathjs": "11.1.0",
     "mobx": "6.6.2",
     "mobx-react-lite": "3.4.0",
-    "next": "12.2.5",
+    "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rooks": "7.1.1"
@@ -28,7 +28,7 @@
     "@types/react": "18.0.18",
     "autoprefixer": "10.4.8",
     "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
+    "eslint-config-next": "12.3.0",
     "postcss": "8.4.16",
     "prettier": "2.7.1",
     "tailwindcss": "3.1.8",
