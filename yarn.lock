@@ -24,12 +24,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.19.0":
-  version: 7.19.0
-  resolution: "@babel/runtime@npm:7.19.0"
+"@babel/runtime@npm:^7.19.4":
+  version: 7.19.4
+  resolution: "@babel/runtime@npm:7.19.4"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: fa69c351bb05e1db3ceb9a02fdcf620c234180af68cdda02152d3561015f6d55277265d3109815992f96d910f3db709458cae4f8df1c3def66f32e0867d82294
+  checksum: 66b7e3c13e9ee1d2c9397ea89144f29a875edee266a0eb2d9971be51b32fdbafc85808c7a45e011e6681899bb804b4e2ee2aed6dc07108dbbd6b11b6cc2afba6
   languageName: node
   linkType: hard
 
@@ -978,10 +978,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decimal.js@npm:^10.4.0":
-  version: 10.4.0
-  resolution: "decimal.js@npm:10.4.0"
-  checksum: 98702d9d817a9e5b3767ea6580e7f3b35544b9454e463a5dd5d3232131470f39067d02864c45cab009eb1200bc162cd26a33d34c622cd79e4657a3e25e95fb4e
+"decimal.js@npm:^10.4.1":
+  version: 10.4.1
+  resolution: "decimal.js@npm:10.4.1"
+  checksum: 5da6dc74af5b73d954741b24d404ef6da07841794d9e51412a2708ec384dd7b4bced3365fb178f4cd119b7ef45f0b34344014a4dc0494c8374c5e746df3cb410
   languageName: node
   linkType: hard
 
@@ -2357,13 +2357,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mathjs@npm:11.2.1":
-  version: 11.2.1
-  resolution: "mathjs@npm:11.2.1"
+"mathjs@npm:11.3.0":
+  version: 11.3.0
+  resolution: "mathjs@npm:11.3.0"
   dependencies:
-    "@babel/runtime": ^7.19.0
+    "@babel/runtime": ^7.19.4
     complex.js: ^2.1.1
-    decimal.js: ^10.4.0
+    decimal.js: ^10.4.1
     escape-latex: ^1.2.0
     fraction.js: ^4.2.0
     javascript-natural-sort: ^0.7.1
@@ -2372,7 +2372,7 @@ __metadata:
     typed-function: ^4.1.0
   bin:
     mathjs: bin/cli.js
-  checksum: 83ff278bc7a633757ca0b81f2c7c60f8ea70fb077266f60ea6b25a09325ba71f27096d08b3eeb58e8c438b9252e5b70e4a770842830cc249aaa85d523ed19616
+  checksum: bf582933b55f7fd7936024693a01b1ca505ffd4668dc978f0d72c1005d51ace1528a41ced1c04561e4f4898100a6b6982d1c04aced4cc65e43c8c6386ef7b045
   languageName: node
   linkType: hard
 
@@ -2527,7 +2527,7 @@ __metadata:
     eslint: 8.25.0
     eslint-config-next: 12.3.1
     lodash: 4.17.21
-    mathjs: 11.2.1
+    mathjs: 11.3.0
     mobx: 6.6.2
     mobx-react-lite: 3.4.0
     next: 12.3.1
