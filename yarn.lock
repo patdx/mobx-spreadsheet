@@ -978,10 +978,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decimal.js@npm:^10.4.1":
-  version: 10.4.1
-  resolution: "decimal.js@npm:10.4.1"
-  checksum: 5da6dc74af5b73d954741b24d404ef6da07841794d9e51412a2708ec384dd7b4bced3365fb178f4cd119b7ef45f0b34344014a4dc0494c8374c5e746df3cb410
+"decimal.js@npm:^10.4.2":
+  version: 10.4.2
+  resolution: "decimal.js@npm:10.4.2"
+  checksum: 536cd6816a3197f2e1aa3da4860856cb5a2db73f6fafe8cb3b924ccc63f9b7d78296acc13dccbd419bd958ccc6357921fb15467f883b37cab04bfba7044cada2
   languageName: node
   linkType: hard
 
@@ -2357,13 +2357,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mathjs@npm:11.3.0":
-  version: 11.3.0
-  resolution: "mathjs@npm:11.3.0"
+"mathjs@npm:11.3.1":
+  version: 11.3.1
+  resolution: "mathjs@npm:11.3.1"
   dependencies:
     "@babel/runtime": ^7.19.4
     complex.js: ^2.1.1
-    decimal.js: ^10.4.1
+    decimal.js: ^10.4.2
     escape-latex: ^1.2.0
     fraction.js: ^4.2.0
     javascript-natural-sort: ^0.7.1
@@ -2372,7 +2372,7 @@ __metadata:
     typed-function: ^4.1.0
   bin:
     mathjs: bin/cli.js
-  checksum: bf582933b55f7fd7936024693a01b1ca505ffd4668dc978f0d72c1005d51ace1528a41ced1c04561e4f4898100a6b6982d1c04aced4cc65e43c8c6386ef7b045
+  checksum: b2e0c4c658dc485345d0cd63ba8bdeff089f768b7c40b71719735470bca35953762806785949ab92a3465c5ddec92bb7d223fc88d7fa4d3ef7c7dc62231ef006
   languageName: node
   linkType: hard
 
@@ -2527,7 +2527,7 @@ __metadata:
     eslint: 8.25.0
     eslint-config-next: 12.3.1
     lodash: 4.17.21
-    mathjs: 11.3.0
+    mathjs: 11.3.1
     mobx: 6.6.2
     mobx-react-lite: 3.4.0
     next: 12.3.1
