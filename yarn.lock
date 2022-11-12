@@ -24,12 +24,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.19.4":
-  version: 7.19.4
-  resolution: "@babel/runtime@npm:7.19.4"
+"@babel/runtime@npm:^7.20.1":
+  version: 7.20.1
+  resolution: "@babel/runtime@npm:7.20.1"
   dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: 66b7e3c13e9ee1d2c9397ea89144f29a875edee266a0eb2d9971be51b32fdbafc85808c7a45e011e6681899bb804b4e2ee2aed6dc07108dbbd6b11b6cc2afba6
+    regenerator-runtime: ^0.13.10
+  checksum: 00567a333d3357925742a6f5e39394dcc0af6e6029103fe188158bf7ae8b0b3ee3c6c0f68fccc217f0a6cfa455f6be252298baf56b3f5ff37b34313b170cd9f6
   languageName: node
   linkType: hard
 
@@ -2392,11 +2392,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mathjs@npm:11.3.2":
-  version: 11.3.2
-  resolution: "mathjs@npm:11.3.2"
+"mathjs@npm:11.3.3":
+  version: 11.3.3
+  resolution: "mathjs@npm:11.3.3"
   dependencies:
-    "@babel/runtime": ^7.19.4
+    "@babel/runtime": ^7.20.1
     complex.js: ^2.1.1
     decimal.js: ^10.4.2
     escape-latex: ^1.2.0
@@ -2407,7 +2407,7 @@ __metadata:
     typed-function: ^4.1.0
   bin:
     mathjs: bin/cli.js
-  checksum: 0cd0864c90f6f8d4bc316ea6c70f0ac705ece30c0d6314cdd6f77f678481d816c5e977274f9c720582ff776f99e557609b92526157470b2bfdd8df2a6241f426
+  checksum: eff953c57ae64f167ba4047d9f1dcb09dbb6e9808f3dc0db263243afbfdff35029463460b6d1b44d58427831f66dc0ffd9da3c72cbbd11c84321d54dd447640a
   languageName: node
   linkType: hard
 
@@ -2572,7 +2572,7 @@ __metadata:
     eslint: 8.27.0
     eslint-config-next: 13.0.2
     lodash: 4.17.21
-    mathjs: 11.3.2
+    mathjs: 11.3.3
     mobx: 6.6.2
     mobx-react-lite: 3.4.0
     next: 13.0.2
@@ -3257,6 +3257,13 @@ __metadata:
   dependencies:
     picomatch: ^2.2.1
   checksum: 1ced032e6e45670b6d7352d71d21ce7edf7b9b928494dcaba6f11fba63180d9da6cd7061ebc34175ffda6ff529f481818c962952004d273178acd70f7059b320
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.10":
+  version: 0.13.10
+  resolution: "regenerator-runtime@npm:0.13.10"
+  checksum: 09893f5a9e82932642d9a999716b6c626dc53ef2a01307c952ebbf8e011802360163a37c304c18a6c358548be5a72b448e37209954a18696f21e438c81cbb4b9
   languageName: node
   linkType: hard
 
