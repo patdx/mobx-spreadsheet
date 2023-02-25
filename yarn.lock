@@ -24,12 +24,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.20.13":
-  version: 7.20.13
-  resolution: "@babel/runtime@npm:7.20.13"
+"@babel/runtime@npm:^7.21.0":
+  version: 7.21.0
+  resolution: "@babel/runtime@npm:7.21.0"
   dependencies:
     regenerator-runtime: ^0.13.11
-  checksum: 09b7a97a05c80540db6c9e4ddf8c5d2ebb06cae5caf3a87e33c33f27f8c4d49d9c67a2d72f1570e796045288fad569f98a26ceba0c4f5fad2af84b6ad855c4fb
+  checksum: 7b33e25bfa9e0e1b9e8828bb61b2d32bdd46b41b07ba7cb43319ad08efc6fda8eb89445193e67d6541814627df0ca59122c0ea795e412b99c5183a0540d338ab
   languageName: node
   linkType: hard
 
@@ -2493,11 +2493,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mathjs@npm:11.5.1":
-  version: 11.5.1
-  resolution: "mathjs@npm:11.5.1"
+"mathjs@npm:11.6.0":
+  version: 11.6.0
+  resolution: "mathjs@npm:11.6.0"
   dependencies:
-    "@babel/runtime": ^7.20.13
+    "@babel/runtime": ^7.21.0
     complex.js: ^2.1.1
     decimal.js: ^10.4.3
     escape-latex: ^1.2.0
@@ -2508,7 +2508,7 @@ __metadata:
     typed-function: ^4.1.0
   bin:
     mathjs: bin/cli.js
-  checksum: 91faa49abfb864f721c90720852830a213f2d459a9b5f3943e8d67b45d4d3c462d0d698c68d00323d3e812699c579516a221f9c1eb1313961c3e411211534b7c
+  checksum: d6f5acc876d31d387e3aa9c5831192c68ad52f848bbaed361a9021595e65caed87a94057b6c48649dd671e811d7b77ecda7e2a7f9aa50c2e18d295c415bfa613
   languageName: node
   linkType: hard
 
@@ -2673,7 +2673,7 @@ __metadata:
     eslint: 8.34.0
     eslint-config-next: 13.1.6
     lodash: 4.17.21
-    mathjs: 11.5.1
+    mathjs: 11.6.0
     mobx: 6.8.0
     mobx-react-lite: 3.4.0
     next: 13.1.6
