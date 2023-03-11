@@ -2644,9 +2644,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mobx-react-lite@npm:3.4.2":
-  version: 3.4.2
-  resolution: "mobx-react-lite@npm:3.4.2"
+"mobx-react-lite@npm:3.4.3":
+  version: 3.4.3
+  resolution: "mobx-react-lite@npm:3.4.3"
   peerDependencies:
     mobx: ^6.1.0
     react: ^16.8.0 || ^17 || ^18
@@ -2655,7 +2655,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: d3648f7c4f6e3923458b533b7c987397542f33f2905467fdf6e63fcdfa6c51f2c60a5a3ebf72a9d2b326a6c4876932c4312dd4ae2253cf1fc4b02ad586e94aa6
+  checksum: 60a2580eb9a0b9988fc76959d7299f018733dc33cacaa73c45500953006d4d45e738d9ae39ccfc767ac19a75656dbc028d833282c848fbc67d8d18a2bcb5c262
   languageName: node
   linkType: hard
 
@@ -2676,7 +2676,7 @@ __metadata:
     lodash: 4.17.21
     mathjs: 11.6.0
     mobx: 6.8.0
-    mobx-react-lite: 3.4.2
+    mobx-react-lite: 3.4.3
     next: 13.2.3
     postcss: 8.4.21
     prettier: 2.8.4
