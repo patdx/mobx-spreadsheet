@@ -960,9 +960,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:2.51.3":
-  version: 2.51.3
-  resolution: "daisyui@npm:2.51.3"
+"daisyui@npm:2.51.4":
+  version: 2.51.4
+  resolution: "daisyui@npm:2.51.4"
   dependencies:
     color: ^4.2
     css-selector-tokenizer: ^0.8.0
@@ -971,7 +971,7 @@ __metadata:
   peerDependencies:
     autoprefixer: ^10.0.2
     postcss: ^8.1.6
-  checksum: 489cfbd0363af5637c5ab86246cf4d127aa2f4444b1b900e20c6c850b734de78dfeaf46b52b15adbb89bcad9fb4622664278250044e7ab363956da3ae1343d3f
+  checksum: f24cfc9e17f09d3a2a4dd02ea073b97f2a6e0c3f3b301ed8867f87d693157a74554d36e1d2a04356f117c84e582724564665db4cc2d72e71de21eed1ba0620c6
   languageName: node
   linkType: hard
 
@@ -2494,9 +2494,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mathjs@npm:11.6.0":
-  version: 11.6.0
-  resolution: "mathjs@npm:11.6.0"
+"mathjs@npm:11.7.0":
+  version: 11.7.0
+  resolution: "mathjs@npm:11.7.0"
   dependencies:
     "@babel/runtime": ^7.21.0
     complex.js: ^2.1.1
@@ -2509,7 +2509,7 @@ __metadata:
     typed-function: ^4.1.0
   bin:
     mathjs: bin/cli.js
-  checksum: d6f5acc876d31d387e3aa9c5831192c68ad52f848bbaed361a9021595e65caed87a94057b6c48649dd671e811d7b77ecda7e2a7f9aa50c2e18d295c415bfa613
+  checksum: 7884abc3b7634929624ac679573fba6a3efed52fdd0b819d7dc0c546a9c3b9dbc9d3d905570574d4176b97a62693837d0565015e0675711c904c31c6e854cf87
   languageName: node
   linkType: hard
 
@@ -2670,11 +2670,11 @@ __metadata:
     "@use-it/event-listener": 0.1.7
     autoprefixer: 10.4.14
     clsx: 1.2.1
-    daisyui: 2.51.3
+    daisyui: 2.51.4
     eslint: 8.36.0
     eslint-config-next: 13.2.4
     lodash: 4.17.21
-    mathjs: 11.6.0
+    mathjs: 11.7.0
     mobx: 6.8.0
     mobx-react-lite: 3.4.3
     next: 13.2.4
