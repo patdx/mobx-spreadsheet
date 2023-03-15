@@ -11,9 +11,9 @@
   "dependencies": {
     "@use-it/event-listener": "0.1.7",
     "clsx": "1.2.1",
-    "daisyui": "2.51.3",
+    "daisyui": "2.51.4",
     "lodash": "4.17.21",
-    "mathjs": "11.6.0",
+    "mathjs": "11.7.0",
     "mobx": "6.8.0",
     "mobx-react-lite": "3.4.3",
     "next": "13.2.4",
