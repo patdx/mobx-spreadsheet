@@ -323,10 +323,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.15.3":
-  version: 18.15.3
-  resolution: "@types/node@npm:18.15.3"
-  checksum: 31b1d92475a82c30de29aa6c0771b18a276552d191283b4423ba2d61b3f01159bf0d02576c0b7cc834b043997893800db6bb47f246083ed85aa45e79c80875d7
+"@types/node@npm:18.15.9":
+  version: 18.15.9
+  resolution: "@types/node@npm:18.15.9"
+  checksum: 5165f84f2fe25699879129b98c405c05e8d0428414c99fa544e22bdd0ea502aac384d26418298a31983064fa18c98e2fba5791b9c907bd78ccbcb49c23101bee
   languageName: node
   linkType: hard
 
@@ -337,14 +337,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.0.28":
-  version: 18.0.28
-  resolution: "@types/react@npm:18.0.28"
+"@types/react@npm:18.0.29":
+  version: 18.0.29
+  resolution: "@types/react@npm:18.0.29"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: e752df961105e5127652460504785897ca6e77259e0da8f233f694f9e8f451cde7fa0709d4456ade0ff600c8ce909cfe29f9b08b9c247fa9b734e126ec53edd7
+  checksum: 75f56f81d80a1c15ee3fcd2039bdc5f7a70f49cf69827ee0fc8beece9809b234f245dd62552e91018d8f25792986bd513b44caf054554d5c5eb979a5f9460214
   languageName: node
   linkType: hard
 
@@ -960,9 +960,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:2.51.4":
-  version: 2.51.4
-  resolution: "daisyui@npm:2.51.4"
+"daisyui@npm:2.51.5":
+  version: 2.51.5
+  resolution: "daisyui@npm:2.51.5"
   dependencies:
     color: ^4.2
     css-selector-tokenizer: ^0.8.0
@@ -971,7 +971,7 @@ __metadata:
   peerDependencies:
     autoprefixer: ^10.0.2
     postcss: ^8.1.6
-  checksum: f24cfc9e17f09d3a2a4dd02ea073b97f2a6e0c3f3b301ed8867f87d693157a74554d36e1d2a04356f117c84e582724564665db4cc2d72e71de21eed1ba0620c6
+  checksum: cdc49c2378b1cae907eb3b1167266930c07a3e8e3da06339ddf200f93fbbef0d9b1fa6b3b2ba6ebfae5a4bcbb40eeb4bc8ff3256d9f30b04f5baaf26698d9eaf
   languageName: node
   linkType: hard
 
@@ -2665,33 +2665,33 @@ __metadata:
   dependencies:
     "@tailwindcss/forms": 0.5.3
     "@types/lodash": 4.14.191
-    "@types/node": 18.15.3
-    "@types/react": 18.0.28
+    "@types/node": 18.15.9
+    "@types/react": 18.0.29
     "@use-it/event-listener": 0.1.7
     autoprefixer: 10.4.14
     clsx: 1.2.1
-    daisyui: 2.51.4
+    daisyui: 2.51.5
     eslint: 8.36.0
     eslint-config-next: 13.2.4
     lodash: 4.17.21
     mathjs: 11.7.0
-    mobx: 6.8.0
+    mobx: 6.9.0
     mobx-react-lite: 3.4.3
     next: 13.2.4
     postcss: 8.4.21
-    prettier: 2.8.4
+    prettier: 2.8.7
     react: 18.2.0
     react-dom: 18.2.0
-    rooks: 7.8.1
+    rooks: 7.8.4
     tailwindcss: 3.2.7
     typescript: 4.9.5
   languageName: unknown
   linkType: soft
 
-"mobx@npm:6.8.0":
-  version: 6.8.0
-  resolution: "mobx@npm:6.8.0"
-  checksum: f09bb079292ea59023a7e35a9c73ed577e3de9a0175ec3d5a2adc8192e2e3a352b29ec0981ee06d1d63f701f81bb7fc6cc19fd9089edf84a754a8a75ef00ef7f
+"mobx@npm:6.9.0":
+  version: 6.9.0
+  resolution: "mobx@npm:6.9.0"
+  checksum: ae03e95334887305c49d3e63e54f5e5e571b21f6a649fc0b7f6f1afd83470db63d8ab3e7c4b9e6ace2aaf6eded5255878c5f69d293efa9fd35af3d640b4a4756
   languageName: node
   linkType: hard
 
@@ -3261,12 +3261,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.4":
-  version: 2.8.4
-  resolution: "prettier@npm:2.8.4"
+"prettier@npm:2.8.7":
+  version: 2.8.7
+  resolution: "prettier@npm:2.8.7"
   bin:
     prettier: bin-prettier.js
-  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
+  checksum: fdc8f2616f099f5f0d685907f4449a70595a0fc1d081a88919604375989e0d5e9168d6121d8cc6861f21990b31665828e00472544d785d5940ea08a17660c3a6
   languageName: node
   linkType: hard
 
@@ -3514,17 +3514,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rooks@npm:7.8.1":
-  version: 7.8.1
-  resolution: "rooks@npm:7.8.1"
+"rooks@npm:7.8.4":
+  version: 7.8.4
+  resolution: "rooks@npm:7.8.4"
   dependencies:
     fast-deep-equal: ^3.1.3
     lodash.debounce: ^4.0.8
     raf: ^3.4.1
+    use-sync-external-store: ^1.2.0
   peerDependencies:
     react: ^16.8.0  || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-  checksum: 4712f747344b1dc9c2359bba6bd6aad42eb0bf6119a44bf30c4827d1cec26e5cbd831f93b95f303a4aa680ba7be21981d7a0e7c5326d06d1c8d39fd2b6a799ce
+  checksum: 59f272a19a95ed2e5d9a94c2942513732da3c2f5a8135473d5a38210c249c4c9d181e32723f43080b4612e99d84dd1198963ba2427cc7459a7d66040db9760a0
   languageName: node
   linkType: hard
 
@@ -4116,6 +4117,15 @@ __metadata:
   dependencies:
     punycode: ^2.1.0
   checksum: 7167432de6817fe8e9e0c9684f1d2de2bb688c94388f7569f7dbdb1587c9f4ca2a77962f134ec90be0cc4d004c939ff0d05acc9f34a0db39a3c797dada262633
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
   languageName: node
   linkType: hard
 
