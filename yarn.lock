@@ -2682,7 +2682,7 @@ __metadata:
     prettier: 2.8.7
     react: 18.2.0
     react-dom: 18.2.0
-    rooks: 7.8.4
+    rooks: 7.8.5
     tailwindcss: 3.2.7
     typescript: 4.9.5
   languageName: unknown
@@ -3514,9 +3514,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rooks@npm:7.8.4":
-  version: 7.8.4
-  resolution: "rooks@npm:7.8.4"
+"rooks@npm:7.8.5":
+  version: 7.8.5
+  resolution: "rooks@npm:7.8.5"
   dependencies:
     fast-deep-equal: ^3.1.3
     lodash.debounce: ^4.0.8
@@ -3525,7 +3525,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.0  || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-  checksum: 59f272a19a95ed2e5d9a94c2942513732da3c2f5a8135473d5a38210c249c4c9d181e32723f43080b4612e99d84dd1198963ba2427cc7459a7d66040db9760a0
+  checksum: e15841898b018b2869800b09a1f617f0898d2197dd288f4830ee1dca0de2fd8d5a88b1395b41e407f15c352c8d7d0d5fb1c4a543f69b6f6020a80a953d55e8e2
   languageName: node
   linkType: hard
 
