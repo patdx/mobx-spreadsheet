@@ -288,10 +288,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.14.192":
-  version: 4.14.192
-  resolution: "@types/lodash@npm:4.14.192"
-  checksum: 31e1f0543a04158d2c429c45efd7c77882736630d0652f82eb337d6159ec0c249c5d175c0af731537b53271e665ff8d76f43221d75d03646d31cb4bd6f0056b1
+"@types/lodash@npm:4.14.194":
+  version: 4.14.194
+  resolution: "@types/lodash@npm:4.14.194"
+  checksum: 113f34831c461469d91feca2dde737f88487732898b4d25e9eb23b087bb193985f864d1e1e0f3b777edc5022e460443588b6000a3b2348c966f72d17eedc35ea
   languageName: node
   linkType: hard
 
@@ -309,14 +309,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.0.33":
-  version: 18.0.33
-  resolution: "@types/react@npm:18.0.33"
+"@types/react@npm:18.0.35":
+  version: 18.0.35
+  resolution: "@types/react@npm:18.0.35"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 4fbd2b2b6a26378bdfde121081a6406ec2d39e4ba87ea5f6897ab7bb2198713165e6fd703ad4ed7ba1d4f23ef54a4c9f108f3105c7ed8e136411ee6bdebc5669
+  checksum: e65670397216e037b150a509ec08189140b4c20b82b612ac00b2a7133202be2d1def1e7ee69617b2df06ab4c00c43c4ee23e84788ad661aea9664da2f27c518a
   languageName: node
   linkType: hard
 
@@ -2696,9 +2696,9 @@ __metadata:
   resolution: "mobx-spreadsheet@workspace:."
   dependencies:
     "@tailwindcss/forms": 0.5.3
-    "@types/lodash": 4.14.192
+    "@types/lodash": 4.14.194
     "@types/node": 18.15.11
-    "@types/react": 18.0.33
+    "@types/react": 18.0.35
     "@use-it/event-listener": 0.1.7
     autoprefixer: 10.4.14
     clsx: 1.2.1
@@ -2714,7 +2714,7 @@ __metadata:
     prettier: 2.8.7
     react: 18.2.0
     react-dom: 18.2.0
-    rooks: 7.10.1
+    rooks: 7.11.1
     tailwindcss: 3.3.1
     typescript: 4.9.5
   languageName: unknown
@@ -3553,9 +3553,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rooks@npm:7.10.1":
-  version: 7.10.1
-  resolution: "rooks@npm:7.10.1"
+"rooks@npm:7.11.1":
+  version: 7.11.1
+  resolution: "rooks@npm:7.11.1"
   dependencies:
     fast-deep-equal: ^3.1.3
     lodash.debounce: ^4.0.8
@@ -3564,7 +3564,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.0  || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-  checksum: d4775caf0450cc07bedd792b63163a426ee6527bf2ae2d88d00ac36d0bae8113e1781098c4a42e812add5a20e92d8e9d53929e445079b0e67b0b3aaa6d9dc6eb
+  checksum: 843c4cb47cf25844509bfb48985036e2317efb7877e41f0c0d72aa9438ce03ac32e58a0e0235d333408327abb752ddd307ea434c830570b93f658da9837cb839
   languageName: node
   linkType: hard
 
