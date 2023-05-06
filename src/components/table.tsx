@@ -1,14 +1,15 @@
+'use client';
+
 import times from 'lodash/times';
 import { action, runInAction, toJS } from 'mobx';
 import { observer } from 'mobx-react-lite';
-import { Cell } from '../components/cell';
-import { appState } from '../shared/state';
-import useEventListener from '@use-it/event-listener';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useParams } from 'next/navigation';
 import { useEffect } from 'react';
 import { useKey } from 'rooks';
+import { Cell } from '../components/cell';
 import { moveCell } from '../shared/cell-util';
+import { appState } from '../shared/state';
 
 const COLUMN_LABELS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -16,8 +17,8 @@ const InternalState = observer(function InternalState() {
   let serialized = toJS(appState) as any;
   return (
     <>
-      <Link href={`/${JSON.stringify(serialized)}`}>
-        <a>Permalink</a>
+      <Link href={`/${encodeURIComponent(JSON.stringify(serialized))}`}>
+        Permalink
       </Link>
       <details className="text-xs">
         <summary>Internal state</summary>
@@ -47,13 +48,13 @@ export const Table = observer(function Table() {
   useKey(
     ['Enter'],
     (event) => {
-        event.preventDefault();
-        console.log('enter key triggered');
-        if (!appState.mode && appState.activeCell) {
-          runInAction(() => {
-            appState.mode = 'edit';
-          });
-        }
+      event.preventDefault();
+      console.log('enter key triggered');
+      if (!appState.mode && appState.activeCell) {
+        runInAction(() => {
+          appState.mode = 'edit';
+        });
+      }
     },
     { when: !appState.mode }
   );
@@ -98,11 +99,19 @@ export const Table = observer(function Table() {
     { when: !appState.mode }
   );
 
-  const router = useRouter();
+  const params = useParams();
 
-  const initialData = router.query.slug?.[0];
+  let initialData = params?.['slug'];
 
-  console.log(router.query);
+  if (initialData) {
+    try {
+      initialData = decodeURIComponent(initialData);
+    } catch (err) {
+      // do nothing
+    }
+  }
+
+  console.log('initialData', initialData);
 
   useEffect(() => {
     if (initialData) {
