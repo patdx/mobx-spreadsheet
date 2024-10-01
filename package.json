@@ -14,7 +14,7 @@
     "mathjs": "13.0.0",
     "mobx": "6.13.3",
     "mobx-react-lite": "4.0.7",
-    "next": "13.4.9",
+    "next": "14.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "rooks": "7.14.1"
