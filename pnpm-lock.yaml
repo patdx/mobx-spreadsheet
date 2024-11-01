@@ -18,11 +18,11 @@ importers:
         specifier: 13.0.0
         version: 13.0.0
       mobx:
-        specifier: 6.13.3
-        version: 6.13.3
+        specifier: 6.13.5
+        version: 6.13.5
       mobx-react-lite:
         specifier: 4.0.7
-        version: 4.0.7(mobx@6.13.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.0.7(mobx@6.13.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: 13.4.9
         version: 13.4.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1155,8 +1155,8 @@ packages:
       react-native:
         optional: true
 
-  mobx@6.13.3:
-    resolution: {integrity: sha512-YtAS+ZMbdpbHYUU4ESht3na8KiX11KuMT1yOiKtbKlQ0GZkHDYPKyEw/Tdp7h7aHyLrTWj2TBaSNJ6bCr638iQ==}
+  mobx@6.13.5:
+    resolution: {integrity: sha512-/HTWzW2s8J1Gqt+WmUj5Y0mddZk+LInejADc79NJadrWla3rHzmRHki/mnEUH1AvOmbNTZ1BRbKxr8DSgfdjMA==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -2368,7 +2368,7 @@ snapshots:
       debug: 4.3.4
       enhanced-resolve: 5.13.0
       eslint: 9.5.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@9.5.0))(eslint@9.5.0))(eslint@9.5.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@9.5.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.5.5)(eslint@9.5.0)
       get-tsconfig: 4.5.0
       globby: 13.1.4
@@ -2381,7 +2381,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@9.5.0))(eslint@9.5.0))(eslint@9.5.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@9.5.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -2402,7 +2402,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.5.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@9.5.0))(eslint@9.5.0))(eslint@9.5.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.59.2(eslint@9.5.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@9.5.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -2977,15 +2977,15 @@ snapshots:
 
   minipass@7.0.4: {}
 
-  mobx-react-lite@4.0.7(mobx@6.13.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  mobx-react-lite@4.0.7(mobx@6.13.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      mobx: 6.13.3
+      mobx: 6.13.5
       react: 18.3.1
       use-sync-external-store: 1.2.0(react@18.3.1)
     optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
 
-  mobx@6.13.3: {}
+  mobx@6.13.5: {}
 
   ms@2.1.2: {}
 
