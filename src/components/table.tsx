@@ -10,6 +10,7 @@ import { useKey } from 'rooks';
 import { Cell } from '../components/cell';
 import { moveCell } from '../shared/cell-util';
 import { appState } from '../shared/state';
+import * as v from 'valibot';
 
 const COLUMN_LABELS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -56,7 +57,7 @@ export const Table = observer(function Table() {
         });
       }
     },
-    { when: !appState.mode }
+    { when: !appState.mode },
   );
 
   useKey(['ArrowUp'], (event) => {
@@ -84,7 +85,7 @@ export const Table = observer(function Table() {
         appState.activeCell = moveCell(appState.activeCell, { dx: -1 });
       });
     },
-    { when: !appState.mode }
+    { when: !appState.mode },
   );
 
   useKey(
@@ -96,12 +97,13 @@ export const Table = observer(function Table() {
         appState.activeCell = moveCell(appState.activeCell, { dx: 1 });
       });
     },
-    { when: !appState.mode }
+    { when: !appState.mode },
   );
 
   const params = useParams();
 
-  let initialData = params?.['slug'];
+  const slug = v.parse(v.nullish(v.array(v.string()), null), params?.['slug']);
+  let initialData = slug?.[0];
 
   if (initialData) {
     try {
