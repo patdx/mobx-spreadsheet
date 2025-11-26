@@ -18,7 +18,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "rooks": "7.14.1",
-    "valibot": "1.1.0"
+    "valibot": "1.2.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "0.5.10",
