@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "clsx": "2.1.1",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "mathjs": "14.9.1",
     "mobx": "6.13.7",
     "mobx-react-lite": "4.1.0",
