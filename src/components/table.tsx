@@ -1,11 +1,7 @@
-'use client';
-
 import times from 'lodash/times';
 import { action, runInAction, toJS } from 'mobx';
 import { observer } from 'mobx-react-lite';
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useKey } from 'rooks';
 import { Cell } from '../components/cell';
 import { moveCell } from '../shared/cell-util';
@@ -18,9 +14,9 @@ const InternalState = observer(function InternalState() {
   let serialized = toJS(appState) as any;
   return (
     <>
-      <Link href={`/${encodeURIComponent(JSON.stringify(serialized))}`}>
+      <a href={`/${encodeURIComponent(JSON.stringify(serialized))}`}>
         Permalink
-      </Link>
+      </a>
       <details className="text-xs">
         <summary>Internal state</summary>
 
@@ -100,18 +96,19 @@ export const Table = observer(function Table() {
     { when: !appState.mode },
   );
 
-  const params = useParams();
+  const initialData = useMemo(() => {
+    const path = window.location.pathname.replace(/^\//, '');
+    if (!path) return null;
 
-  const slug = v.parse(v.nullish(v.array(v.string()), null), params?.['slug']);
-  let initialData = slug?.[0];
+    const slug = v.parse(v.nullish(v.string(), null), path);
+    if (!slug) return null;
 
-  if (initialData) {
     try {
-      initialData = decodeURIComponent(initialData);
+      return decodeURIComponent(slug);
     } catch (err) {
-      // do nothing
+      return slug;
     }
-  }
+  }, []);
 
   console.log('initialData', initialData);
 
