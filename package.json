@@ -21,29 +21,29 @@
     "valibot": "1.2.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.2",
+    "@eslint/js": "9.39.3",
     "@tailwindcss/forms": "0.5.11",
-    "@tailwindcss/postcss": "4.1.18",
-    "@types/lodash": "4.17.23",
-    "@types/node": "22.19.7",
-    "@types/react": "19.2.10",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/lodash": "4.17.24",
+    "@types/node": "22.19.13",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "5.1.2",
-    "eslint": "9.39.2",
+    "@vitejs/plugin-react": "5.1.4",
+    "eslint": "9.39.3",
     "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-react-refresh": "0.5.0",
+    "eslint-plugin-react-refresh": "0.5.2",
     "globals": "16.5.0",
     "postcss": "8.5.6",
     "prettier": "3.8.1",
-    "tailwindcss": "4.1.18",
+    "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.54.0",
+    "typescript-eslint": "8.56.1",
     "vite": "7.3.1"
   },
   "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531",
   "pnpm": {
     "overrides": {
-      "@types/react": "19.2.10"
+      "@types/react": "19.2.14"
     }
   }
 }
